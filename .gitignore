@@ -1,0 +1,28 @@
+# Build artifacts
+Backend/*/bin/
+Backend/*/obj/
+Frontend/dist/
+Frontend/node_modules/
+Frontend/.angular/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Database
+*.mdf
+*.ldf
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

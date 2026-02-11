@@ -1,0 +1,12 @@
+/home/runner/work/eVoter/eVoter/Backend/eVoter.Core/bin/Debug/net8.0/eVoter.Core.deps.json
+/home/runner/work/eVoter/eVoter/Backend/eVoter.Core/bin/Debug/net8.0/eVoter.Core.dll
+/home/runner/work/eVoter/eVoter/Backend/eVoter.Core/bin/Debug/net8.0/eVoter.Core.pdb
+/home/runner/work/eVoter/eVoter/Backend/eVoter.Core/obj/Debug/net8.0/eVoter.Core.GeneratedMSBuildEditorConfig.editorconfig
+/home/runner/work/eVoter/eVoter/Backend/eVoter.Core/obj/Debug/net8.0/eVoter.Core.AssemblyInfoInputs.cache
+/home/runner/work/eVoter/eVoter/Backend/eVoter.Core/obj/Debug/net8.0/eVoter.Core.AssemblyInfo.cs
+/home/runner/work/eVoter/eVoter/Backend/eVoter.Core/obj/Debug/net8.0/eVoter.Core.csproj.CoreCompileInputs.cache
+/home/runner/work/eVoter/eVoter/Backend/eVoter.Core/obj/Debug/net8.0/eVoter.Core.sourcelink.json
+/home/runner/work/eVoter/eVoter/Backend/eVoter.Core/obj/Debug/net8.0/eVoter.Core.dll
+/home/runner/work/eVoter/eVoter/Backend/eVoter.Core/obj/Debug/net8.0/refint/eVoter.Core.dll
+/home/runner/work/eVoter/eVoter/Backend/eVoter.Core/obj/Debug/net8.0/eVoter.Core.pdb
+/home/runner/work/eVoter/eVoter/Backend/eVoter.Core/obj/Debug/net8.0/ref/eVoter.Core.dll
