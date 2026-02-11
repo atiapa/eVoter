@@ -68,8 +68,8 @@ public class AuthController : ControllerBase
         user.LastLoginAt = DateTime.UtcNow;
         await _userRepository.UpdateAsync(user);
 
-        var token = _authService.GenerateJwtToken(user);
         var voter = await _voterRepository.GetByUserIdAsync(user.Id);
+        var token = _authService.GenerateJwtToken(user, voter?.Id);
 
         return Ok(new LoginResponse
         {

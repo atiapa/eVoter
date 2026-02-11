@@ -1,6 +1,5 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
-using System.Security.Cryptography;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
 using eVoter.Core.Models;
@@ -9,7 +8,7 @@ namespace eVoter.API.Services;
 
 public interface IAuthService
 {
-    string GenerateJwtToken(User user);
+    string GenerateJwtToken(User user, int? voterId);
     string HashPassword(string password);
     bool VerifyPassword(string password, string passwordHash);
 }
@@ -23,19 +22,24 @@ public class AuthService : IAuthService
         _configuration = configuration;
     }
 
-    public string GenerateJwtToken(User user)
+    public string GenerateJwtToken(User user, int? voterId)
     {
         var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(
             _configuration["Jwt:Key"] ?? "eVoter-SecureKey-2024-ChangeInProduction-MinLength32Characters"));
         var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
-        var claims = new[]
+        var claims = new List<Claim>
         {
             new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
             new Claim(ClaimTypes.Name, user.Username),
             new Claim(ClaimTypes.Email, user.Email),
             new Claim(ClaimTypes.Role, user.Role.ToString())
         };
+
+        if (voterId.HasValue)
+        {
+            claims.Add(new Claim("VoterId", voterId.Value.ToString()));
+        }
 
         var token = new JwtSecurityToken(
             issuer: _configuration["Jwt:Issuer"] ?? "eVoter",
@@ -50,14 +54,11 @@ public class AuthService : IAuthService
 
     public string HashPassword(string password)
     {
-        using var sha256 = SHA256.Create();
-        var hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
-        return Convert.ToBase64String(hashedBytes);
+        return BCrypt.Net.BCrypt.HashPassword(password);
     }
 
     public bool VerifyPassword(string password, string passwordHash)
     {
-        var hash = HashPassword(password);
-        return hash == passwordHash;
+        return BCrypt.Net.BCrypt.Verify(password, passwordHash);
     }
 }

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 import { VotingService } from '../../services/voting.service';
+import { AuthService } from '../../services/auth.service';
 import { Election, Candidate } from '../../models/api.models';
 
 @Component({
@@ -200,7 +202,11 @@ export class VotingComponent implements OnInit {
   message = '';
   messageClass = '';
 
-  constructor(private votingService: VotingService) {}
+  constructor(
+    private votingService: VotingService,
+    private authService: AuthService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.loadElections();
@@ -251,6 +257,7 @@ export class VotingComponent implements OnInit {
   }
 
   logout(): void {
-    // Will be implemented with router
+    this.authService.logout();
+    this.router.navigate(['/login']);
   }
 }

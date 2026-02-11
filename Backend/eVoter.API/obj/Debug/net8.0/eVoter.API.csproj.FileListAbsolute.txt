@@ -151,3 +151,4 @@
 /home/runner/work/eVoter/eVoter/Backend/eVoter.API/obj/Debug/net8.0/eVoter.API.pdb
 /home/runner/work/eVoter/eVoter/Backend/eVoter.API/obj/Debug/net8.0/eVoter.API.genruntimeconfig.cache
 /home/runner/work/eVoter/eVoter/Backend/eVoter.API/obj/Debug/net8.0/ref/eVoter.API.dll
+/home/runner/work/eVoter/eVoter/Backend/eVoter.API/bin/Debug/net8.0/BCrypt.Net-Next.dll

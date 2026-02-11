@@ -27,7 +27,7 @@ A secure, scalable, and user-friendly electronic voting system built with ASP.NE
 - **Mobile Support**: Capacitor integration for native mobile apps
 
 ### Security Features
-- Password hashing with SHA256
+- Password hashing with bcrypt
 - JWT token authentication
 - HTTPS support
 - Vote encryption and hashing

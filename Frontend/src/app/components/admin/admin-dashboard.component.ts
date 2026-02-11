@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AdminService } from '../../services/admin.service';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-admin-dashboard',
@@ -328,7 +330,11 @@ export class AdminDashboardComponent implements OnInit {
     ]
   };
 
-  constructor(private adminService: AdminService) {}
+  constructor(
+    private adminService: AdminService,
+    private authService: AuthService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.loadElections();
@@ -422,6 +428,7 @@ export class AdminDashboardComponent implements OnInit {
   }
 
   logout(): void {
-    // Will be implemented with router
+    this.authService.logout();
+    this.router.navigate(['/login']);
   }
 }

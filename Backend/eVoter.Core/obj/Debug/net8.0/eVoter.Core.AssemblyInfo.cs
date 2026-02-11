@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("eVoter.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b03b83dcb1e70df2cdc0a67182bbacd0dedbd38e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c96fcdeeca2bb800799cfaaf386be30ca8d3796a")]
 [assembly: System.Reflection.AssemblyProductAttribute("eVoter.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("eVoter.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
