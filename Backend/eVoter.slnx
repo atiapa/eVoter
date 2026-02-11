@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="eVoter.API/eVoter.API.csproj" />
+  <Project Path="eVoter.Core/eVoter.Core.csproj" />
+  <Project Path="eVoter.Data/eVoter.Data.csproj" />
+</Solution>
